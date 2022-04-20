@@ -1,0 +1,31 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+/* section {
+    margin: auto;
+    width: 100%;
+    height: 25vw;
+} */
+
+.info-st {
+    background-image: url(../imgs/comp2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.avatar-section {
+    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+    width: 25%;
+    margin: auto;
+}
+
+.avatar-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #0077B6;
+}
