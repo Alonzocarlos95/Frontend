@@ -11,21 +11,143 @@ body {
     height: 25vw;
 } */
 
-.info-st {
+/* .info-st {
     background-image: url(../imgs/comp2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.info-st {
+    position: relative;
+    padding: 10px 0px;
+}
+
+.info-st:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image:url(../imgs/comp2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .avatar-section {
-    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     width: 25%;
     margin: auto;
+    padding: 20px 0px;
 }
 
 .avatar-section img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 4px solid #0077B6;
+    border: 3px solid #C2DFE3;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.avatar-section h2, h3{
+    text-align: center;
+}
+
+.social-med {
+    display: flex;
+    justify-content: center;
+} 
+
+.media:hover {
+    cursor: pointer;
+}
+
+.media i{
+    font-size: 15px;
+    margin: 3px 10px;
+    color:#253237;
+}
+
+.media .fa-facebook:hover{
+    color: #3b5998;
+}
+
+.media .fa-instagram:hover {
+    color: #8a3ab9;
+}
+.media .fa-linkedin:hover {
+color: #0e76a8;
+}
+
+.media .fa-twitter-square:hover {
+    color: #00acee; 
+}
+
+.container {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.accordion-item {
+    background-color: #283042;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+}
+
+.accordion-link {
+    color: rgba(255,255,255,.8);
+    text-decoration: none;
+    background-color: #283042;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;   
+}
+
+.accordion-link i {
+    color: #e7d5ff;
+    padding: .5rem;
+}
+
+.accordion-link .fa-dash {
+    display: none;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #212838;
+    transition: max-height 650ms;
+}
+
+.answer::before {
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: #8fc460;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p {
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.accordion-item:target .answer {
+    max-height: 20rem;
+
 }
