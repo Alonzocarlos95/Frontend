@@ -3,8 +3,20 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
+    background-color: #1E2326;
 }
 
+nav h1 {
+    color: #fff;
+}
+
+
+/* *,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+} */
 /* section {
     margin: auto;
     width: 100%;
@@ -91,8 +103,12 @@ color: #0e76a8;
 .container {
     width: 100%;
     max-width: 80rem;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 0 1.5rem;
+}
+
+.accordion {
+    list-style-type: none;
 }
 
 .accordion-item {
@@ -119,7 +135,7 @@ color: #0e76a8;
     padding: .5rem;
 }
 
-.accordion-link .fa-dash {
+.accordion-link .fa-minus {
     display: none;
 }
 
@@ -136,18 +152,33 @@ color: #0e76a8;
     position: absolute;
     width: .6rem;
     height: 90%;
-    background-color: #8fc460;
+    background-color: #8ECAE6;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
 }
 
-.answer p {
+.answer a {
+    color: rgba(255,255,255,.6);
     font-size: 1.4rem;
-    padding: 2rem;
+    padding: 1.5rem;
+    margin:0px;
+    text-decoration: none;
 }
 
 .accordion-item:target .answer {
     max-height: 20rem;
 
+}
+
+.accordion-item:target .accordion-link .fa-plus {
+    display: none; 
+}
+
+.accordion-item:target .accordion-link .fa-minus {
+    display: block; 
+}
+
+.opened {
+    max-height: 20rem !important;
 }
