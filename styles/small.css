@@ -145,6 +145,7 @@ color: #0e76a8;
     position: relative;
     background-color: #212838;
     transition: max-height 650ms;
+    margin-bottom: 6px;
 }
 
 .answer::before {
