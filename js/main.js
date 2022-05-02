@@ -10,8 +10,8 @@ const links = [
     {
         label: "Week 2",
         description: "Arrays, Logic, Loops, and Functions",level: {
-            exercises:["W02/exercises/ch2.html","W02/exercises/ch3.html","W02/exercises/ch4.html"],
-            ref:[" - Ch2: Programming basics", " - Ch3: Arrays, Logic, and Loops", " - Ch4: Functions"]
+            exercises:["W02/exercises/ch2.html","W02/exercises/ch3.html","W02/exercises/ch4.html","W02/exercises/teamWork.html"],
+            ref:[" - Ch2: Programming basics", " - Ch3: Arrays, Logic, and Loops", " - Ch4: Functions"," - Team Assignment"]
         }
     },
     {
