@@ -18,8 +18,8 @@ const links = [
         label: "Week 3",
         description: "Objects, DOM, and Events",
         level: {
-            exercises:["W03/exercises/ch5.html"],
-            ref:[" - Ch5: Objects"]
+            exercises:["W03/exercises/ch5.html", "W03/exercises/ch6.html"],
+            ref:[" - Ch5: Objects", " - Ch6: Document Object Model"]
         }
     },
     {
