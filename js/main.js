@@ -24,10 +24,10 @@ const links = [
     },
     {
         label: "Week 4",
-        description: "Unknown",
+        description: "Forms, OOP, and Modern Javascript",
         level: {
-            exercises:["#test"],
-            ref:[""]
+            exercises:["W04/exercises/ch8.html", "W04/exercises/ch12.html"],
+            ref:[" - Ch8: Forms", " - Ch12: Object Oriented Programming"]
         }
     },
     {
