@@ -32,10 +32,10 @@ const links = [
     },
     {
         label: "Week 5",
-        description: "Unknown",
+        description: "Testing and Debugging",
         level: {
-            exercises:["#test"],
-            ref:[""]
+            exercises:["W05/exercises/ch10.html"],
+            ref:[" - Ch10: Testing and Debugging"]
         }
     },
     {
