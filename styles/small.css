@@ -29,6 +29,15 @@ nav h1 {
     background-size: cover;
 } */
 
+@keyframes pulse {
+    0% {
+    box-shadow: 0 0 0 0 rgba(28, 182, 152, 0.2), 0 0 0 1em rgba(28, 182, 152, 0.2), 0 0 0 3em rgba(28, 182, 152, 0.2), 0 0 0 5em rgba(28, 182, 152, 0.2);
+   }
+    100% {
+    box-shadow: 0 0 0 1em rgba(28, 182, 152, 0.2), 0 0 0 3em rgba(28, 182, 152, 0.2), 0 0 0 5em rgba(28, 182, 152, 0.2), 0 0 0 8em rgba(28, 182, 152, 0);
+   }
+   }
+
 .info-st {
     position: relative;
     padding: 10px 0px;
@@ -53,7 +62,7 @@ nav h1 {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     width: 25%;
     margin: auto;
-    padding: 20px 0px;
+    padding: 60px 0px;
 }
 
 .avatar-section img {
@@ -64,10 +73,18 @@ nav h1 {
     margin-right: auto;
     margin-left: auto;
     display: block;
+    animation: pulse 0.7s linear infinite;
 }
 
 .avatar-section h2, h3{
     text-align: center;
+    font-family: 'Righteous', cursive;
+}
+
+.avatar-section h2 {
+    font-size: 48px;
+    line-height: 50px;
+    text-transform: uppercase;
 }
 
 .social-med {
@@ -183,3 +200,10 @@ color: #0e76a8;
 .opened {
     max-height: 20rem !important;
 }
+
+section .contact-info {
+    background-image: url(../imgs/carlos_facebook.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
