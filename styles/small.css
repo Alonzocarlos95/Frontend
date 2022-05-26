@@ -7,7 +7,12 @@ body {
 }
 
 nav h1 {
-    color: #fff;
+    color: #1CB698;
+    font-size: 36px;
+    font-family: 'Righteous', cursive;
+    font-weight: 200;
+    padding: 8px;
+    margin: 0;
 }
 
 
@@ -41,6 +46,9 @@ nav h1 {
 .info-st {
     position: relative;
     padding: 10px 0px;
+    padding-top: 100px;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .info-st:before {
@@ -63,6 +71,8 @@ nav h1 {
     width: 25%;
     margin: auto;
     padding: 60px 0px;
+    border-radius: 15px;
+    background: #252A2E;
 }
 
 .avatar-section img {
@@ -73,6 +83,7 @@ nav h1 {
     margin-right: auto;
     margin-left: auto;
     display: block;
+    transform: translateY(-50%);
     animation: pulse 0.7s linear infinite;
 }
 
@@ -82,9 +93,18 @@ nav h1 {
 }
 
 .avatar-section h2 {
-    font-size: 48px;
-    line-height: 50px;
+    font-size: 35px;
+    line-height: 40px;
     text-transform: uppercase;
+    margin-top: -25px;
+    color: #fff;
+    letter-spacing: 0.03em;
+}
+
+.avatar-section h3 {
+    font-size: 17px;
+    color: #fff;
+    font-weight: 100;
 }
 
 .social-med {
@@ -97,9 +117,9 @@ nav h1 {
 }
 
 .media i{
-    font-size: 15px;
+    font-size: 20px;
     margin: 3px 10px;
-    color:#253237;
+    color:#fff;
 }
 
 .media .fa-facebook:hover{

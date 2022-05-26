@@ -3,9 +3,10 @@
         font-size: 20px;
     }
 
+
     .avatar-section img {
-        width: 140px;
-        height: 140px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         border: 12px solid #1CB698;
     }
