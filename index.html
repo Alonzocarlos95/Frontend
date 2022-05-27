@@ -13,11 +13,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap" rel="stylesheet">
     <!--FontAwesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--Mapbox API-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
     <header>
         <nav>
             <h1>Carlos</h1>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#dev_about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="">Resume</a></li>
+                <li><a href="#works-target">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <section class="info-st">
@@ -29,8 +40,100 @@
             <div class="media"><a href="https://www.facebook.com/carlosadrian.alonzopalacios/"><i class="fa-brands fa-facebook"></a></i></div>
             <div class="media"><a href="https://www.instagram.com/adri_an2495"><i class="fa-brands fa-instagram"></i></a></div>
             <div class="media"><a href="https://www.linkedin.com/in/carlos-alonzo-a5bb68138/"><i class="fa-brands fa-linkedin"></i></a></div>
-            <div class="media"><i class="fa-brands fa-twitter-square"></i></div>
+            <div class="media" title="Github"><a href="https://github.com/Alonzocarlos95/"><i class="fa-brands fa-github"></i></a></div>
         </div>
+        </div>
+    </section>
+    <section id="dev_about">
+        <div class="title-contact">
+            <i class="fa-solid fa-circle-info"></i>
+            <h2>About me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-content-text">
+                <p><strong>Hello! I am Carlos.</strong> Featured for my knowledge and applications in the Frontend. Advanced management of the most popular Javascript libraries and frameworks. Highly skilled in implementing core backend development tasks including Third Party API integration, website maintenance, REST API Development, etc. Proficient in liaising with stakeholders including team members & remote clients to effectively conduct requirement gathering and optimize solutions as per client requirements.</p>
+            </div>
+            <div class="about-details">
+                <article>
+                    <table id="tbl_dev_details">
+                        <tr><th colspan="2">Personal Details</th></tr>
+                        <tr><td><strong>Birthdate</strong></td><td>24-11-1995</td></tr>
+                        <tr><td>Phone</td><td>+593 988 337 542</td></tr>
+                        <tr><td>Email</td><td>carlosalonzo95@hotmail.com</td></tr>
+                        <tr><td>Address</td><td>Portoviejo, Manabi, Ecuador</td></tr>
+                        <tr><td>Job Status</td><td>ACIIS process specialist</td></tr>
+                        <tr></tr>
+                    </table>
+                </article>
+                <article>
+                    <div>
+                        <div class="title-interest">
+                            <h3>My Interests</h3>
+                        </div>
+                        <div class="content-interest">
+                            <ul>
+                                <li><i class="fa-solid fa-laptop-code"></i><span>Code</span></li>
+                                <li><i class="fa-solid fa-plane-departure"></i><span>Travel</span></li>
+                                <li><i class="fa-solid fa-futbol"></i><span>Soccer</span></li>
+                                <li><i class="fa-solid fa-dumbbell"></i><span>Workout</span></li>
+                                <li><i class="fa-solid fa-book-open"></i><span>Read</span></li>
+                                <li><i class="fa-solid fa-music"></i><span>Music</span></li>
+                                <li><i class="fa-solid fa-pizza-slice"></i><span>Pizza</span></li>
+                                <li><i class="fa-solid fa-gamepad"></i><span>Games</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="about-cv">
+                <a download="CV" href="files/CV.pdf" class="btnDown">Download CV<i class="fa-solid fa-download"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="title-contact">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h2>Skills</h2>
+        </div>
+        <div class="skills-content">
+            <ul class="skill-list">
+                <li><div class="skill-lang"><span>Javascript</span><i class="fa-brands fa-js-square"></i></div><span class="skill-exp">4 Years</span></li>
+                <li><div class="skill-lang"><span>CSS</span><i class="fa-brands fa-css3-alt"></i></div><span class="skill-exp">4 Years</span></li>
+                <li><div class="skill-lang"><span>SASS</span><i class="fa-brands fa-sass"></i></div><span class="skill-exp">3 Years</span></li>
+                <li><div class="skill-lang"><span>React</span><i class="fa-brands fa-react"></i></div><span class="skill-exp">2 Years</span></li>
+                <li><div class="skill-lang"><span>Angular</span><i class="fa-brands fa-angular"></i></div><span class="skill-exp">2 Years</span></li>
+                <li><div class="skill-lang"><span>Vue</span><i class="fa-brands fa-vuejs"></i></div><span class="skill-exp">2 Years</span></li>
+                <li><div class="skill-lang"><span>Node JS</span><i class="fa-brands fa-node"></i></div><span class="skill-exp">2 Years</span></li>
+                <li><div class="skill-lang"><span>PHP</span><i class="fa-brands fa-php"></i></div><span class="skill-exp">3 Years</span></li>
+                <li><div class="skill-lang"><span>MYSQL</span><i class="fa-solid fa-database"></i></i></div><span class="skill-exp">3 Years</span></li>
+                <li><div class="skill-lang"><span>JAVA</span><i class="fa-brands fa-java"></i></div><span class="skill-exp">2 Years</span></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="title-contact">
+            <i class="fa-solid fa-folder-open"></i>
+            <h2>My Resume</h2>
+        </div>
+    </section>
+    <section id="works">
+        <div class="title-contact">
+            <i class="fa-solid fa-briefcase"></i>
+            <h2 id="works-target">Work</h2>
+        </div>
+        <div class="work-container">
+            <div class="portfolio-e">
+                <img src="imgs/weatherApp.png" alt="">
+            </div>
+            <div class="portfolio-e">
+                <img src="imgs/css-garden2.png" alt="">
+            </div>
+            <div class="portfolio-e">
+                <img src="imgs/contoso-u.png" alt="">
+            </div>
+            <div class="portfolio-e">
+                <img src="imgs/nodeApp.png" alt="">
+            </div>
         </div>
     </section>
     <main>
@@ -38,14 +141,33 @@
 
         </ul>
     </main>
-    <section>
+    <section id="contact">
         <div class="contact-info">
-
+            <div class="title-contact">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <h2>Contact Me</h2>
+            </div>
+            <div class="col-contact">
+            <article>
+                <form action="mailto:carlosalonzo95@hotmail.com" method="POST" enctype="text/plain">
+                    <input type="text" name="name" id="name" placeholder="Your Name">
+                    <input type="text" name="telephone" id="telephone" placeholder="Phone Number">
+                    <input type="email" name="email" id="email" placeholder="Email Address">
+                    <input type="text" name="e-subject" id="e-subject" placeholder="Subject">
+                    <textarea name="e-message" id="e-message" cols="30" rows="10" placeholder="Message"></textarea>
+                    <input type="submit" name="submit" value="Send Message">
+                </form>
+            </article>
+            <article>
+                <div id='map' style='width: 400px; height: 300px;'></div>
+            </article>
+            </div>
         </div>
     </section>
     <footer>
-
+        <p>&copy; Copyright 2022 Carlos Alonzo. All Rights Reserved.</p>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/geolocation.js"></script>        
 </body>
 </html>

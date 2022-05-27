@@ -106,7 +106,7 @@ const links = [
 
 const catalog = document.getElementById("catalog");
 for(var i=0; i < links.length; i++){
-    debugger
+    // debugger
     let catalogList = document.createElement("li");
     catalogList.classList.add("accordion");
     catalogList.innerHTML = '<div class="accordion-item" id="w'+ i +'"><a class="accordion-link" id="acc'+ i +'" href="#l'+ i +'" >'+ links[i].label +' - '+ links[i].description +'<i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></a></div>';
@@ -123,9 +123,9 @@ for(var i=0; i < links.length; i++){
 
 let acc_wrapper = document.getElementsByClassName("accordion-link");
 for(var i = 0; i < acc_wrapper.length; i++){
-    debugger;
+    // debugger;
     for(var y = 0; y < links[i].level.exercises.length; y++){
-            debugger;
+            // debugger;
         let topics = document.createElement("div");
         topics.id = 'ans'+i;
         topics.classList.add("answer");
@@ -141,7 +141,7 @@ for(var i = 0; i < acc_wrapper.length; i++){
 
 Array.from(document.getElementsByClassName("accordion-link")).forEach(function(element){
     element.addEventListener("click",() => {
-       debugger;
+    //    debugger;
        if(element.parentNode.childNodes.length >= 3){
         let listOfItems = element.parentNode.childNodes;
         for(var i = 1; i < listOfItems.length; i++){
@@ -153,4 +153,9 @@ Array.from(document.getElementsByClassName("accordion-link")).forEach(function(e
        }
         
     })
+})
+
+window.addEventListener("scroll", function(){
+    var navBar = this.document.querySelector("nav");
+    navBar.classList.toggle("sticky", window.scrollY > 0);
 })
