@@ -559,26 +559,84 @@ article #map {
 
 #works {
     background: #252A2E;
+    padding: 0px 10px;
 }
 
 .work-container {
     display: flex;
     margin: auto;
     width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.portfolio-e {
+.portfolio-wrapper {
     border-radius: 10px;
     height: 313px;
     width: 350px;
     margin: 10px;
     cursor: pointer;
+
+}
+
+.portfolio-e {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .portfolio-e img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.portfolio-e > .portfolio-details {
+    position: absolute ;
+    inset: 0;
+    font-size: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-e > img,
+.portfolio-e > .portfolio-details {
+    transition: 200ms ease-in-out;
+}
+
+.portfolio-e:hover > img.blur {
+    filter: blur(5px);
+}
+
+.portfolio-e > .portfolio-details.fade {
+    opacity: 0;
+}
+
+.portfolio-e:hover > .portfolio-details.fade {
+    opacity: 1;
+}
+
+.portfolio-wrapper figcaption {
+    text-align: center;
+    color: #fff;
+    font-family: 'Righteous',cursive;
+    font-size: 15px;
+    letter-spacing: 0.05px;
+}
+
+.portfolio-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 footer {

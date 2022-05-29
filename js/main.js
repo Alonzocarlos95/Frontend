@@ -40,10 +40,10 @@ const links = [
     },
     {
         label: "Week 6",
-        description: "Unknown",
+        description: "Challenge One: Todo",
         level: {
-            exercises:["#test"],
-            ref:[""]
+            exercises:["W06/challenges/index.html"],
+            ref:[" - Todo App"]
         }
     },
     {
@@ -129,7 +129,7 @@ for(var i = 0; i < acc_wrapper.length; i++){
         let topics = document.createElement("div");
         topics.id = 'ans'+i;
         topics.classList.add("answer");
-        topics.innerHTML = '<a href='+ links[i].level.exercises[y]+'>Exercises '+ links[i].level.ref[y] +'</a>';
+        topics.innerHTML = '<a href='+ links[i].level.exercises[y]+' target="_blank">Exercises '+ links[i].level.ref[y] +'</a>';
         document.getElementsByClassName("accordion-item")[i].appendChild(topics);
     }
 }

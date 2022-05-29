@@ -1,3 +1,5 @@
+import {saveToStorage, loadStorage} from "./ls.js"
+
 function getCurrentDate(elementId){
     return setInterval(
         () => document.getElementById(elementId).innerHTML = new Date().toLocaleTimeString(), 1000
@@ -30,11 +32,12 @@ function saveForm() {
         //Close Modal
         document.getElementById('bounce_modal').classList.remove('active');
 
-        addToDo();
+        addToDo(task,dateTask,priorTask);
         cleanForm();
     }
 
-    function addToDo() {
+    function addToDo(x, y, z) {
+        saveToStorage(x.value ,y.value ,z);
         const tbl = document.getElementById('tbl_todo');
         const idItem = Math.floor(Date.now() * Math.random());
         var row = tbl.insertRow(0);
@@ -46,11 +49,10 @@ function saveForm() {
         var cell5 = row.insertCell(4);
         cell1.innerHTML = '<input type="checkbox" name="todoBox" class="chg-mng" id='+ idItem +'>'
         cell1.removeAttribute('checked');
-        cell2.innerHTML = '<span>'+ task.value +'</span>';
-        cell3.innerHTML = dateTask.value;
-        cell4.innerHTML = '<i class="fa-solid fa-flag '+ priorTask.options[priorTask.selectedIndex].id +'"></i>';
-        cell5.innerHTML = '<i class="fa-solid fa-trash-can" ></i>'
-        cell5.setAttribute('style','display:none;');
+        cell2.innerHTML = '<i class="fa-solid fa-trash-can" ></i>'
+        cell3.innerHTML = '<span>'+ task.value +'</span>';
+        cell4.innerHTML = dateTask.value;
+        cell5.innerHTML = '<i class="fa-solid fa-flag '+ priorTask.options[priorTask.selectedIndex].id +'"></i>';
         // cell4.innerHTML = priorTask.options[priorTask.selectedIndex].id;
     }
 
@@ -74,33 +76,38 @@ function saveForm() {
         )
     });
 
-    Array.from(document.getElementsByClassName("r-action")).forEach(function(element) {
-        debugger;
-        element.addEventListener('mouseover', (element) => {
-            debugger;
-            const trashElement = element.target.parentNode.childNodes;
-            trashElement[4].setAttribute('style','display:table-cell;');
+    // Array.from(document.getElementsByClassName("r-action")).forEach(function(element) {
+    //     debugger;
+    //     element.addEventListener('mouseover', (element) => {
+    //         debugger;
+    //         const trashElement = element.target.parentNode.childNodes;
+    //         trashElement[4].setAttribute('style','display:table-cell;');
 
-        }
-        )
-        element.addEventListener('mouseout', (element) => {
-            const trashElement = element.target.parentNode.childNodes;
-            trashElement[4].setAttribute('style','display:none;');
-        })
-    });
+    //     }
+    //     )
+    //     element.addEventListener('mouseout', (element) => {
+    //         const trashElement = element.target.parentNode.childNodes;
+    //         trashElement[4].setAttribute('style','display:none;');
+    //     })
+    // });
 
     function completeTask(item) {
         debugger;
-        document.getElementById(item).parentNode.nextSibling.childNodes[0].classList.add('completed');
+        document.getElementById(item).parentNode.nextSibling.nextSibling.childNodes[0].classList.add('completed');
     }
 
     function uncheckTask(item) {
-        document.getElementById(item).parentNode.nextSibling.childNodes[0].classList.remove('completed')
+        document.getElementById(item).parentNode.nextSibling.nextSibling.childNodes[0].classList.remove('completed')
     }
 
 }
 
+function callLocalStorage(todoStorage) {
+    loadStorage(todoStorage);
+}
+
 export {
     getCurrentDate,
-    saveForm
+    saveForm,
+    callLocalStorage
 }

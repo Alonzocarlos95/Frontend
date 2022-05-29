@@ -1,4 +1,16 @@
-import { getCurrentDate, saveForm } from "./utilities.js";
+import { getCurrentDate, saveForm, callLocalStorage } from "./utilities.js";
+
+// let elements = [];
+
+window.onload = function() {
+    debugger;
+    if(localStorage.getItem("todo-elements") != null) {
+        debugger;
+        callLocalStorage(JSON.parse(localStorage.getItem("todo-elements")));
+            // elements = JSON.parse(localStorage.getItem("todo-elements"));
+            // console.log(elements);
+    }
+}
 
 getCurrentDate('cu_date'); //Get the current Date to display in the header image.
 
