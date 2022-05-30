@@ -46,12 +46,12 @@ header nav h2 {
 }
 
 .container-todo {
-    height: 350px;
+    height: 380px;
     /* background-image: linear-gradient(to right, #2c3e50, #4ca1af); */
     background: linear-gradient(-20deg, #d0b782 20%, #a0cecf 80%);
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 .container-todo h3 {
@@ -121,6 +121,14 @@ header nav h2 {
 
 footer {
     text-align: center;
+    background-color: #457B9D;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+
+footer p {
+    color: #F1FAEE;
+    margin: 0px;
 }
 
 form input, form select {
@@ -203,6 +211,23 @@ button[type=submit] {
     height: 16px;
 }
 
+.quotes {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-style: italic;
+    font-size: 35px;
+    letter-spacing: 0.08rem;
+    opacity: 0;
+    display: none;
+}
+
+.q-active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
 #tbl_todo {
     margin: auto;
     margin-top: 0;
@@ -213,15 +238,24 @@ button[type=submit] {
     overflow-y: scroll;
 }
 
+#tbl_todo tbody {
+    display: block;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 #tbl_todo tbody tr {
     border-bottom: 1px solid #fff;
     margin: 5px 2px;
     width: 100%;
+    display: flex;
 }
 
 #tbl_todo tbody tr td {
     padding: 10px 2px;
     color: #435757;
+    margin: auto;
 }
 
 #tbl_todo tbody tr td:nth-child(1) {

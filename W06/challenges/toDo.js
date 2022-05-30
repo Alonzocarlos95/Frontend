@@ -1,5 +1,4 @@
 import { getCurrentDate, saveForm, callLocalStorage } from "./utilities.js";
-
 // let elements = [];
 
 window.onload = function() {
@@ -9,6 +8,9 @@ window.onload = function() {
         callLocalStorage(JSON.parse(localStorage.getItem("todo-elements")));
             // elements = JSON.parse(localStorage.getItem("todo-elements"));
             // console.log(elements);
+    }
+    else {
+        document.getElementsByClassName('quotes')[0].classList.add('q-active');
     }
 }
 
@@ -41,8 +43,6 @@ document.addEventListener('click', function (e) {
 document.getElementById('saveTask').addEventListener('click', saveForm, false);
 debugger;
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
-
-
 
 function checkVal() {
     alert('More checking')
