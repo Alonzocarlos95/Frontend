@@ -63,6 +63,30 @@ function saveForm() {
         dateTask.value = '';
     }
 
+    function testing() {
+        Array.from(document.getElementsByClassName("chg-mng")).forEach(function(element) {
+            debugger;
+            element.addEventListener('click', (element) => {
+                debugger;
+                if(element.target.checked === true){
+                    completeTask(element.target.id);
+                }
+                else {
+                    uncheckTask(element.target.id);
+                }
+    
+            }
+            )
+        });
+    }
+
+
+    actionEvents();
+
+
+}
+
+function actionEvents() {
     Array.from(document.getElementsByClassName("chg-mng")).forEach(function(element) {
         debugger;
         element.addEventListener('click', (element) => {
@@ -77,39 +101,26 @@ function saveForm() {
         }
         )
     });
+}
 
-    // Array.from(document.getElementsByClassName("r-action")).forEach(function(element) {
-    //     debugger;
-    //     element.addEventListener('mouseover', (element) => {
-    //         debugger;
-    //         const trashElement = element.target.parentNode.childNodes;
-    //         trashElement[4].setAttribute('style','display:table-cell;');
+function completeTask(item) {
+    debugger;
+    document.getElementById(item).parentNode.nextSibling.nextSibling.childNodes[0].classList.add('completed');
+}
 
-    //     }
-    //     )
-    //     element.addEventListener('mouseout', (element) => {
-    //         const trashElement = element.target.parentNode.childNodes;
-    //         trashElement[4].setAttribute('style','display:none;');
-    //     })
-    // });
-
-    function completeTask(item) {
-        debugger;
-        document.getElementById(item).parentNode.nextSibling.nextSibling.childNodes[0].classList.add('completed');
-    }
-
-    function uncheckTask(item) {
-        document.getElementById(item).parentNode.nextSibling.nextSibling.childNodes[0].classList.remove('completed')
-    }
-
+function uncheckTask(item) {
+    document.getElementById(item).parentNode.nextSibling.nextSibling.childNodes[0].classList.remove('completed')
 }
 
 function callLocalStorage(todoStorage) {
     loadStorage(todoStorage);
+    actionEvents();
 }
+
+
 
 export {
     getCurrentDate,
     saveForm,
-    callLocalStorage
+    callLocalStorage,
 }

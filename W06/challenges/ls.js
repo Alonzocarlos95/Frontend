@@ -1,3 +1,5 @@
+import {saveForm} from "./utilities.js";
+
 let toDoList = [];
 
 function saveToStorage(taskName, taskDate, taskPrior) {
@@ -114,6 +116,8 @@ function loadStorage(items) {
         cell4.innerHTML = items[i].dateSet;
         cell5.innerHTML = '<i class="fa-solid fa-flag '+ items[i].priority +'"></i>';
     }
+
+
 }
 
 

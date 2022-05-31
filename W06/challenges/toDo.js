@@ -1,5 +1,4 @@
 import { getCurrentDate, saveForm, callLocalStorage } from "./utilities.js";
-// let elements = [];
 
 window.onload = function() {
     debugger;
@@ -47,3 +46,4 @@ const checkboxes = document.querySelectorAll("input[type=checkbox]");
 function checkVal() {
     alert('More checking')
 }
+
