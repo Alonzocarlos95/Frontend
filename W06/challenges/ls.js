@@ -23,12 +23,19 @@ function addToLocalStorage(toDoList) {
     renderTodos(toDoList);
 }
 
+function removeStorage(idItem) {
+}
+
+
 function renderTodos(toDoList) {
     debugger;
     function removeTodo(event) {
         debugger;
         event.target.parentNode.parentNode.remove();
+        removeStorage();
     }
+
+
 
     function formatArray(bx) {
         debugger;
@@ -69,8 +76,6 @@ function renderTodos(toDoList) {
                 getCurrentItems(toDoList, intersection);
             }
         }
-        // for(var j = 0; j < boxesArray.length; j++){
-        //     if(toDoList[i].id != boxesArray[j].id) {
             for(var i = 0; i < toDoList.length; i++) {
                 var row = tbl.insertRow(0);
                 row.classList.add('r-action')
@@ -81,7 +86,7 @@ function renderTodos(toDoList) {
                 var cell5 = row.insertCell(4);
                 cell1.innerHTML = '<input type="checkbox" name="todoBox" class="chg-mng" id='+ toDoList[i].id +'>';
                 cell1.removeAttribute('checked');
-                cell2.innerHTML = '<i class="fa-solid fa-trash-can del-action" ></i>'
+                cell2.innerHTML = '<i class="fa-solid fa-trash-can del-action" data-name='+ toDoList[i].id +'></i>'
                 cell2.onclick = removeTodo;
                 cell3.innerHTML = '<span>'+ toDoList[i].content +'</span>';
                 cell4.innerHTML = toDoList[i].dateSet;
@@ -97,6 +102,7 @@ function loadStorage(items) {
     function removeTodo(event) {
         debugger;
         event.target.parentNode.parentNode.remove();
+        removeStorage(event.target.attributes.dataval.value);
     }
     const tbl = document.getElementById('tbl_todo');
     for(var i = 0; i < items.length; i++) {
@@ -110,7 +116,7 @@ function loadStorage(items) {
         var cell5 = row.insertCell(4);
         cell1.innerHTML = '<input type="checkbox" name="todoBox" class="chg-mng" id='+ items[i].id +'>';
         cell1.removeAttribute('checked');
-        cell2.innerHTML = '<i class="fa-solid fa-trash-can del-action"></i>'
+        cell2.innerHTML = '<i class="fa-solid fa-trash-can del-action" dataval='+ items[i].id +'></i>'
         cell2.firstChild.addEventListener('click', removeTodo, false);
         cell3.innerHTML = '<span>'+ items[i].content +'</span>';
         cell4.innerHTML = items[i].dateSet;
