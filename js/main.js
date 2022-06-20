@@ -64,10 +64,10 @@ const links = [
     },
     {
         label: "Week 9",
-        description: "Unknown",
+        description: "The Window Object, and HTML5 API",
         level: {
-            exercises:["#test"],
-            ref:[""]
+            exercises:["W09/exercises/ch9.html"],
+            ref:[" - Ch9: The Window Object"]
         }
     },
     {
