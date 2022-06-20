@@ -50,8 +50,8 @@ const links = [
         label: "Week 7",
         description: "Further Functions and AJAX",
         level: {
-            exercises:["W07/exercises/ch11.html"],
-            ref:[" - Ch11: Further Functions"]
+            exercises:["W07/exercises/ch11.html", "W07/exercises/ch13.html"],
+            ref:[" - Ch11: Further Functions", " - Ch13: Ajax"],
         }
     },
     {
