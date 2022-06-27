@@ -72,10 +72,10 @@ const links = [
     },
     {
         label: "Week 10",
-        description: "Unknown",
+        description: "Validating Forms",
         level: {
-            exercises:["#test"],
-            ref:[""]
+            exercises:["W10/notes/main_w10.html"],
+            ref:[" - MDN: Validating Forms and Using Fetch."]
         }
     },
     {

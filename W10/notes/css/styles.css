@@ -1,0 +1,57 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.cssauthor.com/wp-content/uploads/2012/12/Corkboard-Wood-Cork-Composite.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.board {
+    background-color: #fff;
+    margin: 50px auto;
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+    padding: 6px;
+    line-height: 25px;
+    position: relative;
+    font-size: 14px;
+    -webit-box-shadow: 0 1px 7px hsl(0deg 0% 0% / 20%);
+    box-shadow: 0 1px 7px hsl(0deg 0% 0% / 20%);
+}
+
+.board::after,
+.board::before {
+    background: #e6e6e6;
+    content: '';
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    width: 100px;
+    -webkit-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+       -moz-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+            box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+}
+
+.board:after {
+    left: -50px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.board:before {
+    right: -50px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+         transform: rotate(45deg);      
+}
+
+.board h1 {
+    text-align: center;
+}
