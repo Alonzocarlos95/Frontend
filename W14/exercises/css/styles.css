@@ -218,11 +218,23 @@ nav ul li {
     -o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
     transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
 } */
+.modal-wrapper {
+    position: fixed;
+    z-index: 9999;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    background-color: rgb(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    will-change: top, opacity;
+    display: none;
+}
 
 .modal-bottom {
     z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0;
+    visibility: hidden; */
     bottom: 0px;
     top: auto;
     margin: auto;
@@ -323,8 +335,8 @@ p#book_subtitle {
 }
 
 .m-active {
-    visibility: visible;
-    opacity: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .m-buttons {
@@ -379,6 +391,7 @@ p#book_subtitle {
 }
 
 .g-mod-container h2{
+    color: #f4e5f4aa;
     background-color: #766C7F;
     text-align: center;
     display: flex;
@@ -399,6 +412,17 @@ p#book_subtitle {
     height: auto;
     margin: 0;
     border-radius: 0 0 5px 5px;
+}
+
+.g-mod-info {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.g-mod-info p {
+    font-size: 15px;
+    margin: 5px 0px;
 }
 
 .g-mod-footer {

@@ -69,8 +69,8 @@ function openModal(x) {
         }
     }
     document.getElementById("book_avatar").src = getSrc;
-    
-    domPropt.modal.classList.toggle("m-active");
+    document.getElementById("mod_wrapper").style.display = "block";
+    // domPropt.modal.classList.toggle("m-active");
 }
 
 
@@ -149,6 +149,11 @@ function fillCategoryOpt() {
 }
 
 document.addEventListener('click',function(e){
+    debugger;
+    if(e.target.matches('.modal-wrapper')){
+        e.target.style.display = "none";
+        return;
+    }
     if(!e.target.matches('.modal-bottom')){
         e.target.classList.remove('m-active');
         return;
@@ -174,6 +179,10 @@ bookTypes.forEach((bType) => {
 })
 
 fillCategoryOpt();
+
+document.getElementById("addBook").addEventListener('click',() => {
+    document.querySelector(".modal-goals").classList.add("m-active");
+})
 
 // google.books.load();
 
