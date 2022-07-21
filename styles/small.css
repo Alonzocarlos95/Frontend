@@ -639,6 +639,32 @@ article #map {
     width: 100%;
 }
 
+.fab-container {
+    position: fixed;
+    z-index: 9998;
+    bottom: 0;
+    right: 0;
+    margin: 12px 24px 24px 0px;
+}
+
+.fab-container .btn-video {
+    background-color: #6290C8;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    box-shadow: rgba(0,0,0,.12) 0px 1px 6px,rgba(0,0,0,.12) 0px 1px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fab-container .btn-video i {
+    color: #fff;
+    font-size: 20px;
+}
+
 footer {
     background-color: #252A2E;
     padding: 25px;
