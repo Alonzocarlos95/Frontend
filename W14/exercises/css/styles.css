@@ -242,6 +242,76 @@ nav ul li {
     margin-top: 25px;
 }
 
+.modal-content .m-titles {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 18px;
+}
+
+p#book_title {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+p#book_subtitle {
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+.book-description {
+    font-size: 14px;
+}
+
+.modal-content .m-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.m-details .b-adds {
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 5px;
+    width: 15%;
+    text-align: center;
+}
+
+.m-details .b-adds .b-info-type {
+    font-size: 14px;
+    margin: 0;
+    color: #1B998B;
+}
+
+.m-details .b-adds .b-info-more {
+    font-size: 13px;
+    margin: 0;
+}
+
+.rating-stars {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+}
+
+.rating-stars::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+}
+
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+  }
+
 .view-fpage {
     position: absolute;
     top: -125px;
@@ -249,6 +319,7 @@ nav ul li {
     margin: auto;
     left: 0;
     right: 0;
+    text-align: center;
 }
 
 .m-active {
@@ -259,11 +330,16 @@ nav ul li {
 .m-buttons {
     display: flex;
     justify-content: space-between;
+    margin-top: 8px;
 }
 
 .m-buttons button {
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
+    background: none;
+    border: 1px solid #cdcdcd !important;
+    border-radius: 3px;
+    padding: 4px 8px;
 }
 
 #book_avatar {
