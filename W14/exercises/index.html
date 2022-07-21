@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store API</title>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/8a914d6648.js" crossorigin="anonymous"></script>
+        <!--Google Fonts API-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap" rel="stylesheet">
+    <!--Loading the Embedded Viewer API-->
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+    <!--Local Stylesheets-->
+    <link rel="stylesheet" href="css/styles.css" media="screen">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-main-opt">
+            <ul>
+                <li><img src="imgs/LogoMakr-7NW0Wa_2.png" alt="Book logo"></li>
+                <li class="active-nav-opt">Home</li>
+                <li>My Library</li>
+                <li>Orders</li>
+            </ul>
+            </div>  
+            <div class="search-bar">
+                <div class="search-by-all">
+                    <input type="search" name="search-all" placeholder="Type book name or author">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="category-bar" id="category_bar">
+                    <div class="categ-opt">
+                        <span>Category</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul id="categor_opt">
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="filter-opt">
+            <ul class="b-link-types">
+                <li id="opt_recom" class="b-types active-opt">Recommended</li>
+                <li id="opt_latest"  class="b-types">Last Added</li>
+            </ul>
+        </div>
+        <div class="carousel">
+            <div class="slider">
+                <section id="recommendBook" class="b-container1 active-container">
+
+                </section>
+                <section id="latestBooks" class="b-container1">
+
+                </section>
+            </div>      
+        </div>
+        <div id="modal_bottom" class="modal-bottom">
+            <div class="modal-content">
+                <div class="view-fpage">
+                    <img id="book_avatar" src="imgs/logo.svg" alt="" style="width:128px;height:190px;">
+                </div>
+                <div class="m-description">
+                    <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper scelerisque nulla, viverra condimentum neque faucibus ultricies. Duis id scelerisque turpis, tempor rutrum diam. Aliquam tincidunt maximus massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin sit amet imperdiet elit. Fusce blandit eu massa sed eleifend. Suspendisse in magna accumsan, feugiat odio eget, commodo leo. Quisque id ipsum orci. Nullam posuere augue non ligula mollis auctor. Quisque quis magna at mi fermentum volutpat. Maecenas tempus maximus enim, vehicula placerat mi.
+
+                        Nullam ex lorem, aliquet non eleifend quis, scelerisque sollicitudin nunc. Praesent sed elementum velit, ut sagittis ex. Morbi blandit lacus congue ipsum convallis, non vestibulum justo aliquam. Aenean elementum, turpis ut tempus mattis, mauris neque sollicitudin turpis, at fringilla sem neque eget dui. Fusce sodales ultrices posuere. Morbi eros sem, dignissim et suscipit ut, gravida id ante. In dignissim vestibulum odio ut vestibulum.</p>
+                </div>
+                <div class="m-buttons">
+                    <button><i class="fa-solid fa-book-open"></i>Preview</button>
+                    <button><i class="fa-solid fa-square-plus"></i>Add to My Library</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-goals">
+            <div class="g-mod-container">
+                <h2>Set your Goals..!</h2>
+                <div class="g-mod-content">
+                    <div class="g-mod-form">
+                        <form action="">
+                            <div class="form-dates">
+                                <label for="startDate">Start Date:</label>
+                                <input type="date" name="startDate" id="startDate">
+                            </div>
+                            <div class="form-dates">
+                                <label for="endDate">Expected End Date</label>
+                                <input type="date" name="endDate" id="endDate">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="g-mod-footer">
+                        <button class="btn-save-plan"><i class="fa-solid fa-paper-plane"></i>Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="viewerCanvas" style="width: 600px; height: 500px"> -->
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
